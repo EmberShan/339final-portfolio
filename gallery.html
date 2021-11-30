@@ -57,127 +57,135 @@
 
   <!-- main section here -->
 <main id = "gallery-container">
-  <h1>Gallery</h1>
-  <p class = "page-intro"> A series of Monet's Impressionalism paintintgs</p>
-
-  <!-- search bar, right now it does nothing -->
-  <div class = "filter-mobile">
-    <select id="category" aria-label="paintingCategory" onchange = "filterElementMobile()">
-      <option value="showall"> --All--</option>
-      <option value="cityscape">cityscape</option>
-      <option value="portrait">portrait</option>
-      <option value="still-life">still-life</option>
-      <option value="landscape">landscape</option>
-      <option value="sketch">sketch</option>
-    </select>
+  <div class = "gallery-row1">
+    <h1>Gallery</h1>
+    <p class = "page-intro"> A series of Monet's Impressionalism paintintgs</p>
   </div>
-  <!-- filter for desktop version -->
-  <!-- <div class = "filter-desktop">
-    <button class="btn active" onclick="filterSelection('all')"> All </button>
-    <button class="btn" onclick="filterSelection('cityscape')"> cityscape </button>
-    <button class="btn" onclick="filterSelection('portrait')"> portrait </button>
-    <button class="btn" onclick="filterSelection('still-life')"> still-life </button>
-    <button class="btn" onclick="filterSelection('landscape')"> landscape </button>
-    <button class="btn" onclick="filterSelection('sketch')"> sketch </button>
-  </div> -->
+  
 
-  <div class = "img-container">
-    <!-- Images here -->
-    <div class = "img img-hide cityscape"> 
-      <img src = "images/gellery/impression-sunrise.jpg" alt="impression surise"/> 
-      <p class = "caption">Impression, sunrise, 1872</p>
-    </div>
+  <div class = 'gallery-row2'>
 
-    <div class = "img img-hide cityscape"> 
-        <img src = "images/gellery/houses-of-parliament.jpg" alt="Houses of Parliament, 1904"/> 
-        <p class = "caption">Houses of Parliament, 1904</p>
+    <!-- search bar, right now it does nothing -->
+    <div class = "filter-mobile">
+      <select id="category" aria-label="paintingCategory" onchange = "filterElementMobile()">
+        <option value="showall"> --All--</option>
+        <option value="cityscape">cityscape</option>
+        <option value="portrait">portrait</option>
+        <option value="still-life">still-life</option>
+        <option value="landscape">landscape</option>
+        <option value="sketch">sketch</option>
+      </select>
     </div>
+    <!-- filter for desktop version -->
+    <!-- <div class = "filter-desktop">
+      <button class="btn active" onclick="filterSelection('all')"> All </button>
+      <button class="btn" onclick="filterSelection('cityscape')"> cityscape </button>
+      <button class="btn" onclick="filterSelection('portrait')"> portrait </button>
+      <button class="btn" onclick="filterSelection('still-life')"> still-life </button>
+      <button class="btn" onclick="filterSelection('landscape')"> landscape </button>
+      <button class="btn" onclick="filterSelection('sketch')"> sketch </button>
+    </div> -->
 
-    <div class = "img img-hide portrait"> 
-        <img src = "images/gellery/lunch-on-the-grass-central-panel.jpg" alt="Lunch on the Grass"/> 
-        <p class = "caption">Lunch on the Grass (central panel), 1865</p>
+    <div class = "img-container">
+      <!-- Images here -->
+      <div class = "img img-hide cityscape"> 
+        <img src = "images/gellery/impression-sunrise.jpg" alt="impression surise"/> 
+        <p class = "caption">Impression, sunrise, 1872</p>
+      </div>
+  
+      <div class = "img img-hide cityscape"> 
+          <img src = "images/gellery/houses-of-parliament.jpg" alt="Houses of Parliament, 1904"/> 
+          <p class = "caption">Houses of Parliament, 1904</p>
+      </div>
+  
+      <div class = "img img-hide portrait"> 
+          <img src = "images/gellery/lunch-on-the-grass-central-panel.jpg" alt="Lunch on the Grass"/> 
+          <p class = "caption">Lunch on the Grass (central panel), 1865</p>
+      </div>
+  
+      <div class = "img img-hide still-life"> 
+          <img src = "images/gellery/jar-of-peaches.jpg" alt="Jar Of Peaches"/> 
+          <p class = "caption">Jar Of Peaches, 1866</p>
+      </div>
+  
+      <div class = "img img-hide landscape"> 
+          <img src = "images/gellery/the-pointe-of-heve-1864.jpg" alt="The Pointe of Heve"/> 
+          <p class = "caption">The Pointe of Heve, 1864</p>
+      </div>
+  
+      <div class = "img img-hide still-life"> 
+          <img src = "images/gellery/spring-flowers-1864.jpg" alt="Spring Flowers"/> 
+          <p class = "caption">Spring Flowers, 1864</p>
+      </div>
+  
+      <div class = "img img-hide landscape"> 
+          <img src = "images/gellery/haystack.jpg" alt="Haystack"/> 
+          <p class = "caption">Haystack, 1865</p>
+      </div>
+  
+      <div class = "img img-hide landscape"> 
+          <img src = "images/gellery/the-beach-at-sainte-adresse.jpg" alt="The Beach at Sainte-Adresse"/> 
+          <p class = "caption">The Beach at Sainte-Adresse, 1867</p>
+      </div>
+  
+      <div class = "img img-hide portrait"> 
+          <img src = "images/gellery/a-woman-reading.jpg" alt="A Woman Reading"/> 
+          <p class = "caption">A Woman Reading, 1872</p>
+      </div>
+  
+      <div class = "img img-hide landscape"> 
+        <img src = "images/gellery/fishing-boats-at-sea.jpg" alt="Fishing Boats at Sea"/> 
+        <p class = "caption">Fishing Boats at Sea, 1868</p>
+      </div>
+      
+      <div class = "img img-hide sketch"> 
+        <img src = "images/gellery/the-road-to-the-farm-of-saint-simeon.jpg" alt="The Road to the Farm of Saint-Simeon"/> 
+        <p class = "caption">The Road to the Farm of Saint-Simeon, 1864</p>
+      </div>
+  
+      <div class = "img img-hide landscape"> 
+        <img src = "images/gellery/the-headland-of-the-heve-at-low-tide.jpg" alt="The Headland of the Heve at Low Tide"/> 
+        <p class = "caption">The Headland of the Heve at Low Tide, 1865</p>
+      </div>
+  
+      <div class = "img img-hide portrait"> 
+        <img src = "images/gellery/camille-with-a-small-dog.jpg" alt="Camille with a Small Dog"/> 
+        <p class = "caption">Camille with a Small Dog, 1866</p>
+      </div>
+  
+      <div class = "img img-hide landscape"> 
+        <img src = "images/gellery/the-grotto-of-port-domois.jpg" alt="The Grotto of Port-Domois"/> 
+        <p class = "caption">The Grotto of Port-Domois, 1866</p>
+      </div>
+  
+      <div class = "img img-hide portrait"> 
+        <img src = "images/gellery/portrait-of-madame-gaudibert.jpg" alt="Portrait of Madame Gaudibert"/> 
+        <p class = "caption">Portrait of Madame Gaudibert, 1868</p>
+      </div>
+  
+      <div class = "img img-hide sketch"> 
+        <img src = "images/gellery/camille-sitting-on-the-beach-at-trouville-1871.jpg" alt="Camille Sitting on the Beach at Trouville"/> 
+        <p class = "caption">Camille Sitting on the Beach at Trouville, 1870-1871</p>
+      </div>
+  
+      <!-- <div class = "img img-hide cityscape"> 
+        <img src = "images/gellery/houses-on-the-zaan-river-at-zaandam.jpg" alt="Houses on the Zaan River at Zaandam"/> 
+        <p class = "caption">Houses on the Zaan River at Zaandam, 1871</p>
+      </div> -->
+  
+  
     </div>
-
-    <div class = "img img-hide still-life"> 
-        <img src = "images/gellery/jar-of-peaches.jpg" alt="Jar Of Peaches"/> 
-        <p class = "caption">Jar Of Peaches, 1866</p>
-    </div>
-
-    <div class = "img img-hide landscape"> 
-        <img src = "images/gellery/the-pointe-of-heve-1864.jpg" alt="The Pointe of Heve"/> 
-        <p class = "caption">The Pointe of Heve, 1864</p>
-    </div>
-
-    <div class = "img img-hide still-life"> 
-        <img src = "images/gellery/spring-flowers-1864.jpg" alt="Spring Flowers"/> 
-        <p class = "caption">Spring Flowers, 1864</p>
-    </div>
-
-    <div class = "img img-hide landscape"> 
-        <img src = "images/gellery/haystack.jpg" alt="Haystack"/> 
-        <p class = "caption">Haystack, 1865</p>
-    </div>
-
-    <div class = "img img-hide landscape"> 
-        <img src = "images/gellery/the-beach-at-sainte-adresse.jpg" alt="The Beach at Sainte-Adresse"/> 
-        <p class = "caption">The Beach at Sainte-Adresse, 1867</p>
-    </div>
-
-    <div class = "img img-hide portrait"> 
-        <img src = "images/gellery/a-woman-reading.jpg" alt="A Woman Reading"/> 
-        <p class = "caption">A Woman Reading, 1872</p>
-    </div>
-
-    <div class = "img img-hide landscape"> 
-      <img src = "images/gellery/fishing-boats-at-sea.jpg" alt="Fishing Boats at Sea"/> 
-      <p class = "caption">Fishing Boats at Sea, 1868</p>
-    </div>
+  
+    <!-- template to add more images -->
+      <!-- <div class = "img img-hide"> 
+        <img src = "images/gellery/" alt=""/> 
+        <p class = "caption"></p>
+      </div> -->
+  
+    <button class="button load-more-btn">Load more</button>
     
-    <div class = "img img-hide sketch"> 
-      <img src = "images/gellery/the-road-to-the-farm-of-saint-simeon.jpg" alt="The Road to the Farm of Saint-Simeon"/> 
-      <p class = "caption">The Road to the Farm of Saint-Simeon, 1864</p>
-    </div>
-
-    <div class = "img img-hide landscape"> 
-      <img src = "images/gellery/the-headland-of-the-heve-at-low-tide.jpg" alt="The Headland of the Heve at Low Tide"/> 
-      <p class = "caption">The Headland of the Heve at Low Tide, 1865</p>
-    </div>
-
-    <div class = "img img-hide portrait"> 
-      <img src = "images/gellery/camille-with-a-small-dog.jpg" alt="Camille with a Small Dog"/> 
-      <p class = "caption">Camille with a Small Dog, 1866</p>
-    </div>
-
-    <div class = "img img-hide landscape"> 
-      <img src = "images/gellery/the-grotto-of-port-domois.jpg" alt="The Grotto of Port-Domois"/> 
-      <p class = "caption">The Grotto of Port-Domois, 1866</p>
-    </div>
-
-    <div class = "img img-hide portrait"> 
-      <img src = "images/gellery/portrait-of-madame-gaudibert.jpg" alt="Portrait of Madame Gaudibert"/> 
-      <p class = "caption">Portrait of Madame Gaudibert, 1868</p>
-    </div>
-
-    <div class = "img img-hide sketch"> 
-      <img src = "images/gellery/camille-sitting-on-the-beach-at-trouville-1871.jpg" alt="Camille Sitting on the Beach at Trouville"/> 
-      <p class = "caption">Camille Sitting on the Beach at Trouville, 1870-1871</p>
-    </div>
-
-    <!-- <div class = "img img-hide cityscape"> 
-      <img src = "images/gellery/houses-on-the-zaan-river-at-zaandam.jpg" alt="Houses on the Zaan River at Zaandam"/> 
-      <p class = "caption">Houses on the Zaan River at Zaandam, 1871</p>
-    </div> -->
-
 
   </div>
-
-  <!-- template to add more images -->
-    <!-- <div class = "img img-hide"> 
-      <img src = "images/gellery/" alt=""/> 
-      <p class = "caption"></p>
-    </div> -->
-
-  <button class="button load-more-btn">Load more</button>
   
   <!-- load more button -->
   <script>

@@ -725,6 +725,7 @@ input[type=text], input[type=email], textarea {
     padding-bottom: 2%;
     padding-top: 4%;
   }
+
   /* gallery uses flex */
   .img-container{
     flex-direction: row;
@@ -776,27 +777,69 @@ input[type=text], input[type=email], textarea {
 
 }
 
-/* when screen size reaches more than 2000px some pages become hard to read */
-/* much larger screen size such as 24 in iMac */
-@media only screen and (min-width: 2000px) {
-  /* Impressionism Page */
-  /* TODO: change the page intro on front page to have smaller widths  */
 
-
-
+@media only screen and (min-width: 1000px) {
   /* Monet Page */
   /* TODO: changing the monet page to 3 columns side by side */
+  #monet-container{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  #monet-container h1{
+    font-size: 1.5em;
+  }
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 500px auto;
+    margin: 0 1% 0 1%;
+    padding: 1% 2% 1% 2%;
+  }
+  .container1{
+    margin-top: 10vh;
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+  }
+  .container2{
+    margin-top: 10vh;
+    grid-row: 1 / -1;
+    grid-column: 2 / 3;
+  }
+  .container3{
+    margin-top: 10vh;
+    grid-row: 1 / -1;
+    grid-column: 3 / 4;
+  }
+  .image{
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+  .monet_text{
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+  }
 
 
   /* Gallery Page */
   /* TODO: changing the filter to the right side of the screen on gallery page */
-
-
-
-  /* More Artsits Page */
-  /* TODO: changing the flipcards to one row */
-
-
+  #gallery-container{
+    display: grid;
+    grid-template-rows: 300px auto;
+  }
+  .gallery-row1{
+    grid-row: 1 / 2;
+  }
+  .gallery-row2{
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: auto 250px;
+  }
+  .img-container, .load-more-btn{
+    grid-column: 1 / 2;
+  }
+  .filter-mobile{
+    grid-column: 2 / -1;
+  }
+  
   
 }
 
