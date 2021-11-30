@@ -411,13 +411,14 @@ input[type=text], input[type=email], textarea {
   }
   .navlinks li{
     width: auto;
-    min-width: 10%;
-    /* max-width: auto; */
+    /* min-width: 10%; */
+    max-width: auto;
     white-space: nowrap;
     padding: 1% 2.5% 1% 2.5%;
   }
-  .navlinks li:hover{
+  .navlinks .link:hover{
     text-decoration: underline;
+    /* color: #66a6a3; */
   }
   .navlinks .displayed .link{
     letter-spacing: 0;
@@ -556,7 +557,7 @@ input[type=text], input[type=email], textarea {
 
   /* monet */
   #monet-container{
-    grid-template-rows: repeat(3, minmax(80vh, auto));
+    grid-template-rows: repeat(3, minmax(800px, auto));
     grid-row-gap: 20px;
   }
   #monet-container h1{
@@ -605,7 +606,7 @@ input[type=text], input[type=email], textarea {
   }
   .monet_text{
     grid-column: 2 / 3;
-    grid-row: 1 / -1;
+    grid-row: 2 / -1;
   }
 
   /* more */
@@ -679,7 +680,9 @@ input[type=text], input[type=email], textarea {
     transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
     transform-style: preserve-3d;
   }
-  .flipcard:hover .flipcard-inner {
+  .flipcard:hover .flipcard-inner, 
+  .flipcard:focus-within .flipcard-inner,
+  .flipcard:active .flipcard-inner{
     transform: rotateY(180deg);
   }
   .caption{
@@ -772,13 +775,39 @@ input[type=text], input[type=email], textarea {
 
 }
 
+/* when screen size reaches more than 2000px some pages become hard to read */
+/* much larger screen size such as 24 in iMac */
+@media only screen and (min-width: 2000px) {
+  /* Impressionism Page */
+  /* TODO: change the page intro on front page to have smaller widths  */
+
+
+
+  /* Monet Page */
+  /* TODO: changing the monet page to 3 columns side by side */
+
+
+  /* Gallery Page */
+  /* TODO: changing the filter to the right side of the screen on gallery page */
+
+
+
+  /* More Artsits Page */
+  /* TODO: changing the flipcards to one row */
+
+
+  
+}
+
 
 
 /* for accessibility */
 @media (prefers-reduced-motion: reduce){
+  /* truning off parallax effect */
   main{
     background-attachment: inherit !important;
   }
+  /* turn off animations */
   *{
      animation: none !important;
      transition: none !important;
@@ -786,9 +815,11 @@ input[type=text], input[type=email], textarea {
    .fullscreen-scroll a span::before {
     animation: none;
   }
+  /* specifically turn off the gradient filter of the front page */
   #neo-impress::after, #post-impress::after, #impressionism::after{
     animation: none;
   }
+  /* turning off hover effects */
   *:hover{
     transform: none !important;
   }
