@@ -682,7 +682,8 @@ input[type=text], input[type=email], textarea {
   }
   .flipcard:hover .flipcard-inner, 
   .flipcard:focus-within .flipcard-inner,
-  .flipcard:active .flipcard-inner{
+  .flipcard:active .flipcard-inner, 
+  .flipcard:focus .flipcard-inner{
     transform: rotateY(180deg);
   }
   .caption{
