@@ -686,7 +686,7 @@ input[type=text], input[type=email], textarea {
   .flipcard:focus .flipcard-inner{
     transform: rotateY(180deg);
   }
-  .caption{
+  .more-caption{
     display: none;
   }
   .flipcard-front, .flipcard-back {
@@ -727,6 +727,9 @@ input[type=text], input[type=email], textarea {
   }
 
   /* gallery uses flex */
+  #gallery-container{
+    min-height: 100vh;
+  }
   .img-container{
     flex-direction: row;
     flex-wrap: wrap;
@@ -754,10 +757,6 @@ input[type=text], input[type=email], textarea {
     transform: translateY(-4%);
     font-size: 1.2em;
   }
-
-  /* .filter-mobile{
-    display: none;
-  } */
 
   #neo-impress, #post-impress, #impressionism{
     min-height: 100vh;
@@ -787,6 +786,7 @@ input[type=text], input[type=email], textarea {
   }
   #monet-container h1{
     font-size: 1.5em;
+    padding-bottom: 5%;
   }
   .container{
     grid-template-columns: 1fr;
@@ -825,19 +825,56 @@ input[type=text], input[type=email], textarea {
     display: grid;
     grid-template-rows: 300px auto;
   }
+  .img-container div{
+    width: 350px;
+    height: 350px;
+  }
+  /* styling the grid layout */
   .gallery-row1{
     grid-row: 1 / 2;
   }
   .gallery-row2{
     grid-row: 2 / -1;
     display: grid;
-    grid-template-columns: auto 250px;
+    grid-template-columns: auto 200px;
+    grid-template-rows: auto auto;
   }
-  .img-container, .load-more-btn{
+  .img-container{
+    padding-top: 0;
     grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .load-more-btn{
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
   }
   .filter-mobile{
+    /* hide the dropdown menu for filtering */
+    display: none;
+  }
+  .filter-desktop{
+    grid-row: 1 / -1;
     grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column; 
+    justify-self: center;
+    /* make the filter always stay on page */
+    position: fixed;
+    top: 315px;
+    right: 25px;
+    z-index: 1;
+  }
+  .filter-desktop .btn{
+    border: none;
+    width: 150px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    font-size: 1.05em;
+    text-transform: capitalize;
+  }
+  .filter-desktop .btn:hover{
+    background-color: #48608f;
+    color: whitesmoke;
   }
   
   
