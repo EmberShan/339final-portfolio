@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <!-- stylesheets -->
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src = "js/script.js" defer></script>
@@ -56,194 +58,220 @@
   </header>
 
   <!-- main section here -->
-<main id = "gallery-container">
-  <div class = "gallery-row1">
-    <h1>Gallery</h1>
-    <p class = "page-intro"> A series of Monet's Impressionalism paintintgs</p>
-  </div>
-  
-
-  <div class = 'gallery-row2'>
-
-    <!-- search bar, right now it does nothing -->
-    <div class = "filter-mobile">
-      <select id="category" aria-label="paintingCategory" onchange = "filterElementMobile()">
-        <option value="showall"> --All--</option>
-        <option value="cityscape">cityscape</option>
-        <option value="portrait">portrait</option>
-        <option value="still-life">still-life</option>
-        <option value="landscape">landscape</option>
-        <option value="sketch">sketch</option>
-      </select>
+  <main id = "gallery-container">
+    <div class = "gallery-row1">
+      <h1>Gallery</h1>
+      <p class = "page-intro"> A series of Monet's Impressionalism paintintgs</p>
     </div>
-    <!-- filter for desktop version -->
-    <div class = "filter-desktop">
-      <button class="btn active" onclick="filterElement('showall')"> All </button>
-      <button class="btn" onclick="filterElement('cityscape')"> cityscape </button>
-      <button class="btn" onclick="filterElement('portrait')"> portrait </button>
-      <button class="btn" onclick="filterElement('still-life')"> still-life </button>
-      <button class="btn" onclick="filterElement('landscape')"> landscape </button>
-      <button class="btn" onclick="filterElement('sketch')"> sketch </button>
-    </div>
-
-    <div class = "img-container">
-      <!-- Images here -->
-      <div class = "img img-hide cityscape"> 
-        <img src = "images/gellery/impression-sunrise.jpg" alt="impression surise"/> 
-        <p class = "caption">Impression, sunrise, 1872</p>
-      </div>
-  
-      <div class = "img img-hide cityscape"> 
-          <img src = "images/gellery/houses-of-parliament.jpg" alt="Houses of Parliament, 1904"/> 
-          <p class = "caption">Houses of Parliament, 1904</p>
-      </div>
-  
-      <div class = "img img-hide portrait"> 
-          <img src = "images/gellery/lunch-on-the-grass-central-panel.jpg" alt="Lunch on the Grass"/> 
-          <p class = "caption">Lunch on the Grass (central panel), 1865</p>
-      </div>
-  
-      <div class = "img img-hide still-life"> 
-          <img src = "images/gellery/jar-of-peaches.jpg" alt="Jar Of Peaches"/> 
-          <p class = "caption">Jar Of Peaches, 1866</p>
-      </div>
-  
-      <div class = "img img-hide landscape"> 
-          <img src = "images/gellery/the-pointe-of-heve-1864.jpg" alt="The Pointe of Heve"/> 
-          <p class = "caption">The Pointe of Heve, 1864</p>
-      </div>
-  
-      <div class = "img img-hide still-life"> 
-          <img src = "images/gellery/spring-flowers-1864.jpg" alt="Spring Flowers"/> 
-          <p class = "caption">Spring Flowers, 1864</p>
-      </div>
-  
-      <div class = "img img-hide landscape"> 
-          <img src = "images/gellery/haystack.jpg" alt="Haystack"/> 
-          <p class = "caption">Haystack, 1865</p>
-      </div>
-  
-      <div class = "img img-hide landscape"> 
-          <img src = "images/gellery/the-beach-at-sainte-adresse.jpg" alt="The Beach at Sainte-Adresse"/> 
-          <p class = "caption">The Beach at Sainte-Adresse, 1867</p>
-      </div>
-  
-      <div class = "img img-hide portrait"> 
-          <img src = "images/gellery/a-woman-reading.jpg" alt="A Woman Reading"/> 
-          <p class = "caption">A Woman Reading, 1872</p>
-      </div>
-  
-      <div class = "img img-hide landscape"> 
-        <img src = "images/gellery/fishing-boats-at-sea.jpg" alt="Fishing Boats at Sea"/> 
-        <p class = "caption">Fishing Boats at Sea, 1868</p>
-      </div>
-      
-      <div class = "img img-hide sketch"> 
-        <img src = "images/gellery/the-road-to-the-farm-of-saint-simeon.jpg" alt="The Road to the Farm of Saint-Simeon"/> 
-        <p class = "caption">The Road to the Farm of Saint-Simeon, 1864</p>
-      </div>
-  
-      <div class = "img img-hide landscape"> 
-        <img src = "images/gellery/the-headland-of-the-heve-at-low-tide.jpg" alt="The Headland of the Heve at Low Tide"/> 
-        <p class = "caption">The Headland of the Heve at Low Tide, 1865</p>
-      </div>
-  
-      <div class = "img img-hide portrait"> 
-        <img src = "images/gellery/camille-with-a-small-dog.jpg" alt="Camille with a Small Dog"/> 
-        <p class = "caption">Camille with a Small Dog, 1866</p>
-      </div>
-  
-      <div class = "img img-hide landscape"> 
-        <img src = "images/gellery/the-grotto-of-port-domois.jpg" alt="The Grotto of Port-Domois"/> 
-        <p class = "caption">The Grotto of Port-Domois, 1866</p>
-      </div>
-  
-      <div class = "img img-hide portrait"> 
-        <img src = "images/gellery/portrait-of-madame-gaudibert.jpg" alt="Portrait of Madame Gaudibert"/> 
-        <p class = "caption">Portrait of Madame Gaudibert, 1868</p>
-      </div>
-  
-      <div class = "img img-hide sketch"> 
-        <img src = "images/gellery/camille-sitting-on-the-beach-at-trouville-1871.jpg" alt="Camille Sitting on the Beach at Trouville"/> 
-        <p class = "caption">Camille Sitting on the Beach at Trouville, 1870-1871</p>
-      </div>
-  
-      <!-- <div class = "img img-hide cityscape"> 
-        <img src = "images/gellery/houses-on-the-zaan-river-at-zaandam.jpg" alt="Houses on the Zaan River at Zaandam"/> 
-        <p class = "caption">Houses on the Zaan River at Zaandam, 1871</p>
-      </div> -->
-  
-  
-    </div>
-  
-    <!-- template to add more images -->
-      <!-- <div class = "img img-hide"> 
-        <img src = "images/gellery/" alt=""/> 
-        <p class = "caption"></p>
-      </div> -->
-  
-    <button class="button load-more-btn">Load more</button>
     
 
-  </div>
-  
-  <!-- load more button -->
-  <script>
+    <div class = 'gallery-row2'>
+
+      <!-- search bar, right now it does nothing -->
+      <div class = "filter-mobile">
+        <select id="category" aria-label="paintingCategory" onchange = "filterElementMobile()">
+          <option value="showall"> --All--</option>
+          <option value="cityscape">cityscape</option>
+          <option value="portrait">portrait</option>
+          <option value="still-life">still-life</option>
+          <option value="landscape">landscape</option>
+          <option value="sketch">sketch</option>
+        </select>
+      </div>
+      <!-- filter for desktop version -->
+      <div class = "filter-desktop">
+        <button class="btn active" onclick="filterElement('showall')"> All </button>
+        <button class="btn" onclick="filterElement('cityscape')"> cityscape </button>
+        <button class="btn" onclick="filterElement('portrait')"> portrait </button>
+        <button class="btn" onclick="filterElement('still-life')"> still-life </button>
+        <button class="btn" onclick="filterElement('landscape')"> landscape </button>
+        <button class="btn" onclick="filterElement('sketch')"> sketch </button>
+      </div>
+
+      <div class = "img-container">
+        <!-- Images here -->
+        <div class = "img img-hide cityscape"> 
+          <img src = "images/gellery/impression-sunrise.jpg" class = "gallery-img" alt="impression surise"/> 
+          <p class = "caption">Impression, sunrise, 1872</p>
+        </div>
     
-    $(document).ready(function(){
-      $(".img").slice(0, 4).removeClass("img-hide");
-      $(".load-more-btn").on("click", function(e){
-        e.preventDefault();
-        $(".img:hidden").slice(0, 4).removeClass("img-hide");
-        if($(".img:hidden").length == 0){
-          $(".load-more-btn").fadeOut();
-        }
-      });
+        <div class = "img img-hide cityscape"> 
+            <img src = "images/gellery/houses-of-parliament.jpg" class = "gallery-img" alt="Houses of Parliament, 1904"/> 
+            <p class = "caption">Houses of Parliament, 1904</p>
+        </div>
     
-    })
+        <div class = "img img-hide portrait"> 
+            <img src = "images/gellery/lunch-on-the-grass-central-panel.jpg" class = "gallery-img" alt="Lunch on the Grass"/> 
+            <p class = "caption">Lunch on the Grass (central panel), 1865</p>
+        </div>
+    
+        <div class = "img img-hide still-life"> 
+            <img src = "images/gellery/jar-of-peaches.jpg" class = "gallery-img" alt="Jar Of Peaches"/> 
+            <p class = "caption">Jar Of Peaches, 1866</p>
+        </div>
+    
+        <div class = "img img-hide landscape"> 
+            <img src = "images/gellery/the-pointe-of-heve-1864.jpg" class = "gallery-img" alt="The Pointe of Heve"/> 
+            <p class = "caption">The Pointe of Heve, 1864</p>
+        </div>
+    
+        <div class = "img img-hide still-life"> 
+            <img src = "images/gellery/spring-flowers-1864.jpg" class = "gallery-img" alt="Spring Flowers"/> 
+            <p class = "caption">Spring Flowers, 1864</p>
+        </div>
+    
+        <div class = "img img-hide landscape"> 
+            <img src = "images/gellery/haystack.jpg" class = "gallery-img" alt="Haystack"/> 
+            <p class = "caption">Haystack, 1865</p>
+        </div>
+    
+        <div class = "img img-hide landscape"> 
+            <img src = "images/gellery/the-beach-at-sainte-adresse.jpg" class = "gallery-img" alt="The Beach at Sainte-Adresse"/> 
+            <p class = "caption">The Beach at Sainte-Adresse, 1867</p>
+        </div>
+    
+        <div class = "img img-hide portrait"> 
+            <img src = "images/gellery/a-woman-reading.jpg" class = "gallery-img" alt="A Woman Reading"/> 
+            <p class = "caption">A Woman Reading, 1872</p>
+        </div>
+    
+        <div class = "img img-hide landscape"> 
+          <img src = "images/gellery/fishing-boats-at-sea.jpg" class = "gallery-img" alt="Fishing Boats at Sea"/> 
+          <p class = "caption">Fishing Boats at Sea, 1868</p>
+        </div>
+        
+        <div class = "img img-hide sketch"> 
+          <img src = "images/gellery/the-road-to-the-farm-of-saint-simeon.jpg" class = "gallery-img" alt="The Road to the Farm of Saint-Simeon"/> 
+          <p class = "caption">The Road to the Farm of Saint-Simeon, 1864</p>
+        </div>
+    
+        <div class = "img img-hide landscape"> 
+          <img src = "images/gellery/the-headland-of-the-heve-at-low-tide.jpg" class = "gallery-img" alt="The Headland of the Heve at Low Tide"/> 
+          <p class = "caption">The Headland of the Heve at Low Tide, 1865</p>
+        </div>
+    
+        <div class = "img img-hide portrait"> 
+          <img src = "images/gellery/camille-with-a-small-dog.jpg" class = "gallery-img" alt="Camille with a Small Dog"/> 
+          <p class = "caption">Camille with a Small Dog, 1866</p>
+        </div>
+    
+        <div class = "img img-hide landscape"> 
+          <img src = "images/gellery/the-grotto-of-port-domois.jpg" class = "gallery-img" alt="The Grotto of Port-Domois"/> 
+          <p class = "caption">The Grotto of Port-Domois, 1866</p>
+        </div>
+    
+        <div class = "img img-hide portrait"> 
+          <img src = "images/gellery/portrait-of-madame-gaudibert.jpg" class = "gallery-img" alt="Portrait of Madame Gaudibert"/> 
+          <p class = "caption">Portrait of Madame Gaudibert, 1868</p>
+        </div>
+    
+        <div class = "img img-hide sketch"> 
+          <img src = "images/gellery/camille-sitting-on-the-beach-at-trouville-1871.jpg" class = "gallery-img" alt="Camille Sitting on the Beach at Trouville"/> 
+          <p class = "caption">Camille Sitting on the Beach at Trouville, 1870-1871</p>
+        </div>
+    
+        <!-- <div class = "img img-hide cityscape gallery-img"> 
+          <img src = "images/gellery/houses-on-the-zaan-river-at-zaandam.jpg" alt="Houses on the Zaan River at Zaandam"/> 
+          <p class = "caption">Houses on the Zaan River at Zaandam, 1871</p>
+        </div> -->
+    
+    
+      </div>
+    
+      <!-- template to add more images -->
+        <!-- <div class = "img img-hide"> 
+          <img src = "images/gellery/" alt=""/> 
+          <p class = "caption"></p>
+        </div> -->
+    
+      <button class="button load-more-btn">Load more</button>
 
-    // filter elements
-    function filterElementMobile(){
-      var filter;
-      filter = document.getElementById("category").value;
-      filterElement(filter)
-    }
+    </div>
 
-    // for filtering elements
-    function filterElement(filter){
-      var f, imgs, elements;
-      f = filter.toLowerCase();
-      imgs = document.getElementsByClassName('img');
+    <!-- revised modal template from bs5 website -->
+    <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/gellery/impression-sunrise.jpg" class="modal-img" alt="modal img">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- load more button -->
+    <script>
 
-      for (i = 0; i < imgs.length; i ++){
-
-        imgs[i].classList.remove('img-hide')
-        $(".load-more-btn").fadeOut();
-
-        if (imgs[i].classList.contains(f)){
-          imgs[i].classList.remove('filter-hide')
-        } else{
-          imgs[i].classList.add('filter-hide')
-        }
-        if (f == "showall"){
-          imgs[i].classList.remove('filter-hide')
-        }
-
-        console.log(f)
+      // this is for the gallery modal 
+      document.addEventListener("click",function (e){
+      if(e.target.classList.contains("gallery-img")){
+          console.log("clicked")
+          // get the image name
+          const src = e.target.getAttribute("src");
+          document.querySelector(".modal-img").src = src;
+          const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'));
+          myModal.show();
       }
+      })
       
-    }
-
+      $(document).ready(function(){
+        $(".img").slice(0, 4).removeClass("img-hide");
+        $(".load-more-btn").on("click", function(e){
+          e.preventDefault();
+          $(".img:hidden").slice(0, 4).removeClass("img-hide");
+          if($(".img:hidden").length == 0){
+            $(".load-more-btn").fadeOut();
+          }
+        });
       
+      })
 
-  </script>
-  
-</main>
+      // filter elements
+      function filterElementMobile(){
+        var filter;
+        filter = document.getElementById("category").value;
+        filterElement(filter)
+      }
+
+      // for filtering elements
+      function filterElement(filter){
+        var f, imgs, elements;
+        f = filter.toLowerCase();
+        imgs = document.getElementsByClassName('img');
+
+        for (i = 0; i < imgs.length; i ++){
+
+          imgs[i].classList.remove('img-hide')
+          $(".load-more-btn").fadeOut();
+
+          if (imgs[i].classList.contains(f)){
+            imgs[i].classList.remove('filter-hide')
+          } else{
+            imgs[i].classList.add('filter-hide')
+          }
+          if (f == "showall"){
+            imgs[i].classList.remove('filter-hide')
+          }
+
+          console.log(f)
+        }
+        
+      }
+
+    </script>
+    
+  </main>
 
 
-<footer>
-  <p>&copy; Ember Shan - University of Michigan 2021</p>
-</footer>
+  <footer>
+    <p>&copy; Ember Shan - University of Michigan 2021</p>
+  </footer>
+
+  <!-- for Bootstrap 5 -->
+  <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -19,3 +19,4 @@ const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     // console.log(mediaQuery)
     });
   });
+

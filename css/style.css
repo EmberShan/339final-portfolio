@@ -50,10 +50,9 @@ main{
   padding-top: 3em;
   background-color: #d9cfc9;
   background-image: url(../images/background8-large.jpg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  /* contain because mobile is doing something weird */
-  background-size: contain; 
+  background-size: cover; 
 }
 /*  */
 .hamburger-menu{
@@ -75,12 +74,10 @@ main{
 .navlinks.active{
   display: flex;
 }
-/*  */
 .navlinks{
   display: none;
 }
 .navlinks ul{
-  /*  */
   width: 100%;
 }
 .navlinks .link, .menu .menu-bar{
@@ -153,128 +150,14 @@ footer p{
   padding : 0;
 }
 
-/* styles for Monet main page */
-/* container for all content on the Monet page */
-
-#monet-container{
-  display: grid;
-}
-
-.monet-description, .impress-description, .realism-vs-impress{
-  padding: 4%;
-  text-align: start;
-  max-width: 600px;
-}
-#monet h1{
-  padding-bottom: 4%;
-}
-/* for read more */
-.hide{
-  display: none;
-}
-
-.read-more-btn{
-  border: none;
-  background-color: rgb(218, 218, 218);
-  padding: 5%;
-  border-radius: 5px;
-  color: #123440;
-  font-size: 1em;
-}
-
-
-/* gallery page styling here */
-/* filter on the gallery page */
-.filter-mobile{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.filter-desktop{
-  display: none;
-}
-#category{
-  padding: 1% 20% 1% 20%;
-  text-align: center;
-  text-transform: capitalize;
-  color: #123440;
-  background-color: rgba(249, 252, 255, .5);
-}
-.filter-hide{
-  display: none !important;
-}
-
-/* images */
-.img-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;  
-  padding-top: 4%;
-}
-.img-hide{
-  /* for load more */
-  display: none;
-}
-/* load more button styling */
-.load-more-btn{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-  background-color: #48608f;
-  color: whitesmoke;
-  padding: 3% 7% 3% 7%;
-  margin: 5% auto 7% auto;
-  border: 0 none;
-  border-radius: 5%;
-  font-size: 1em;
-}
-.img-container div:nth-of-type(odd){
-  animation: filter-animate 2s ease;
-}
-@keyframes filter-animate{
-  from{
-    filter:grayscale(80%);
-  }
-  to{
-    filter:grayscale(0%);
-  }
-}
-
-
-/* more artists styling here */
-#more-container{
-  background-color: #d9cfc9;
-  background-image: none;
-}
-.more-card{
-  margin: 5%;
-  padding: 3%;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-}
-.name{
-  font-weight: 900;
-  font-size: large;
-}
-.more-container{
-  display: grid;
-}
-.allan-freelon{
-  grid-row: 1 / 2;
-}
-.mary-cassatt{
-  grid-row: 2 / 3;
-}
-.berthe-morisot{
-  grid-row: 3 / 4;
-}
 
 
 /* impressionism page styling here */
 #impress-container{
+  background-color: #123440;
   width: 100%;
-  /* hide the weird white space when animation is happening */
   display: flex;
   flex-direction: column;
-
   overflow: hidden; 
 }
 #neo-impress, #post-impress, #impressionism{
@@ -338,6 +221,120 @@ footer p{
 }
 
 
+/* styles for Monet main page */
+/* container for all content on the Monet page */
+
+#monet-container{
+  display: grid;
+}
+
+.monet-description, .impress-description, .realism-vs-impress{
+  padding: 4%;
+  text-align: start;
+  max-width: 600px;
+}
+#monet h1{
+  padding-bottom: 4%;
+}
+/* for read more */
+.hide{
+  display: none;
+}
+.read-more-btn{
+  border: none;
+  background-color: rgb(218, 218, 218);
+  padding: 5%;
+  border-radius: 5px;
+  color: #123440;
+  font-size: 1em;
+}
+
+
+/* gallery page styling here */
+/* filter on the gallery page */
+.filter-mobile{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.filter-desktop{
+  display: none;
+}
+#category{
+  padding: 1% 20% 1% 20%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #123440;
+  background-color: rgba(249, 252, 255, .5);
+}
+.filter-hide{
+  display: none !important;
+}
+
+/* images */
+.img-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  padding-top: 4%;
+}
+.img-hide{
+  /* for load more */
+  display: none;
+}
+/* load more button styling */
+.load-more-btn{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: #48608f;
+  color: whitesmoke;
+  padding: 3% 7% 3% 7%;
+  margin: 5% auto 7% auto;
+  border: 0 none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.img-container div:nth-of-type(odd){
+  animation: filter-animate 2s ease;
+}
+@keyframes filter-animate{
+  from{
+    filter:grayscale(80%);
+  }
+  to{
+    filter:grayscale(0%);
+  }
+}
+
+
+/* more artists styling here */
+#more-container{
+  background-color: #d9cfc9;
+  background-image: none;
+}
+.more-card{
+  margin: 5%;
+  padding: 3%;
+}
+.name{
+  font-weight: 900;
+  font-size: large;
+}
+.more-container{
+  display: grid;
+}
+.allan-freelon{
+  grid-row: 1 / 2;
+}
+.mary-cassatt{
+  grid-row: 2 / 3;
+}
+.berthe-morisot{
+  grid-row: 3 / 4;
+}
+
+
+
 /* contact me page */
 #contact-container{
   min-height: 100vh;
@@ -378,11 +375,6 @@ input[type=text], input[type=email], textarea {
 
 /* larger screens */
 @media only screen and (min-width: 750px) {
-  main{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-  }
   main h1{
     font-size: 2em;
     padding-top: 8%;
@@ -411,14 +403,12 @@ input[type=text], input[type=email], textarea {
   }
   .navlinks li{
     width: auto;
-    /* min-width: 10%; */
     max-width: auto;
     white-space: nowrap;
     padding: 1% 2.5% 1% 2.5%;
   }
   .navlinks .link:hover{
     text-decoration: underline;
-    /* color: #66a6a3; */
   }
   .navlinks .displayed .link{
     letter-spacing: 0;
@@ -437,18 +427,15 @@ input[type=text], input[type=email], textarea {
   }
 
   /* impressionism page snap effects for desktop */
-  #impress-container{
-    background-color: #123440;
-  }
   .pic-container::-webkit-scrollbar {
     /* hide the weird second scroll bar */
     display: none;
   }
   .pic-container div{
+    /* styling the image on the front page to fully occupy the space */
     height: 100vh;
     scroll-snap-align: start;
-    background-size: cover;
-
+    /* the following is to center the titles and text on the pages */
     display: flex;
     justify-content: center;
     align-content: center;
@@ -464,6 +451,7 @@ input[type=text], input[type=email], textarea {
     padding: 0 15% 0 15%;
   }
   .pic-container{
+    /* for snap effects */
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
@@ -472,6 +460,7 @@ input[type=text], input[type=email], textarea {
     padding-bottom: 0;
     padding-top: 0;
   }
+  /* for the Scroll Arrows */
   .fullscreen-scroll a{
     display: inline-block;
     color: whitesmoke;
@@ -502,10 +491,12 @@ input[type=text], input[type=email], textarea {
     transform: rotate(-45deg);
     box-sizing: border-box;
   }
+  /* the last scroll arrow will bring the user back to top */
   #back-to-top span{
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
+  /* this is the white circle around the arrows */
   .fullscreen-scroll a span::before {
     position: absolute;
     top: 50%;
@@ -522,7 +513,7 @@ input[type=text], input[type=email], textarea {
     animation: arrow-animation 4s infinite;
     box-sizing: border-box;
   }
-  
+  /* two same animations because one is for webkit */
   @-webkit-keyframes arrow-animation {
     0% {
       opacity: 0;
@@ -573,14 +564,14 @@ input[type=text], input[type=email], textarea {
     height: 500px;
     object-position: 45% 20%;
   }
+  /* no read more for tablets and desktop */
   .read-more-btn, .dots{
     display: none;
   }
   .hide{
     display: inline;
   }
-
-  /* styling grid */
+  /* styling grid for new monet page layout for tablet */
   .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -609,9 +600,54 @@ input[type=text], input[type=email], textarea {
     grid-row: 2 / -1;
   }
 
+
+  /* gallery uses flex */
+  #gallery-container{
+    min-height: 100vh;
+  }
+  .img-container{
+    flex-direction: row;
+  }
+  .img-container div{
+    width: 400px;
+    height: 400px;
+    background-size: cover; 
+  }
+  .img-container img{
+    object-fit: cover;
+    object-position: 0 10%;
+    width: 98%;
+    height: 90%;
+  }
+  .caption{
+    padding: 0;
+    padding-bottom: 1%;
+  }
+  .load-more-btn{
+    padding: 2% 4% 2% 4%;
+    transition: 0.3s;
+  }
+  .load-more-btn:hover{
+    transform: translateY(-4%);
+    font-size: 1.2em;
+  }
+
+  
+
+  .filter button{
+    text-transform: capitalize;
+    background-color: whitesmoke;
+    padding: 2%;
+  
+    border: none;
+    border-radius: 5px;
+    color: #123440;
+    font-size: 1em;
+    margin: 0 5%;
+  }
+
   /* more */
   #more-container{
-    background-color: whitesmoke;
     background-image: url(../images/background8-large.jpg);
   }
   .more-container{
@@ -619,7 +655,7 @@ input[type=text], input[type=email], textarea {
     grid-template-rows: repeat(6, 20vh);
   }
   .name{
-    /* placing the name in the center of each card */
+    /* placing the name in the center of each flipcard */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -726,54 +762,6 @@ input[type=text], input[type=email], textarea {
     padding-top: 4%;
   }
 
-  /* gallery uses flex */
-  #gallery-container{
-    min-height: 100vh;
-  }
-  .img-container{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .img-container div{
-    width: 400px;
-    height: 400px;
-    background-size: cover; 
-  }
-  .img-container img{
-    object-fit: cover;
-    object-position: 0 10%;
-    width: 98%;
-    height: 90%;
-  }
-  .caption{
-    padding: 0;
-    padding-bottom: 1%;
-  }
-  .load-more-btn{
-    padding: 2% 4% 2% 4%;
-    transition: 0.3s;
-  }
-  .load-more-btn:hover{
-    transform: translateY(-4%);
-    font-size: 1.2em;
-  }
-
-  #neo-impress, #post-impress, #impressionism{
-    min-height: 100vh;
-  }
-
-  .filter button{
-    text-transform: capitalize;
-    background-color: whitesmoke;
-    padding: 2%;
-  
-    border: none;
-    border-radius: 5px;
-    color: #123440;
-    font-size: 1em;
-    margin: 0 5%;
-  }
-
 }
 
 
@@ -825,6 +813,12 @@ input[type=text], input[type=email], textarea {
     display: grid;
     grid-template-rows: 300px auto;
   }
+  .gallery-img{
+    cursor: pointer;
+  }
+  .modal-open {
+    padding-right: 0px !important;
+  }
   .img-container div{
     width: 350px;
     height: 350px;
@@ -836,7 +830,7 @@ input[type=text], input[type=email], textarea {
   .gallery-row2{
     grid-row: 2 / -1;
     display: grid;
-    grid-template-columns: auto 200px;
+    grid-template-columns: auto 150px;
     grid-template-rows: auto auto;
   }
   .img-container{
@@ -845,6 +839,7 @@ input[type=text], input[type=email], textarea {
     grid-row: 1 / 2;
   }
   .load-more-btn{
+    padding: 1% 2% 1% 2%; 
     grid-column: 1 / 2;
     grid-row: 2 / -1;
   }
@@ -865,8 +860,8 @@ input[type=text], input[type=email], textarea {
     z-index: 1;
   }
   .filter-desktop .btn{
-    border: none;
-    width: 150px;
+    background-color: rgba(245, 245, 245, 0.8);
+    width: 125px;
     padding: 15px 20px;
     margin-top: 20px;
     font-size: 1.05em;
