@@ -223,11 +223,13 @@ footer p{
 
 /* styles for Monet main page */
 /* container for all content on the Monet page */
-
 #monet-container{
   display: grid;
 }
-
+.carousel{
+  /* no carousel for phones and tablet */
+  display: none;
+}
 .monet-description, .impress-description, .realism-vs-impress{
   padding: 4%;
   text-align: start;
@@ -403,7 +405,9 @@ input[type=text], input[type=email], textarea {
   }
   .navlinks li{
     width: auto;
-    max-width: auto;
+    height: 90px;
+    align-items: center;
+    display: flex;
     white-space: nowrap;
     padding: 1% 2.5% 1% 2.5%;
   }
@@ -427,6 +431,11 @@ input[type=text], input[type=email], textarea {
   }
 
   /* impressionism page snap effects for desktop */
+  #neo-impress, #post-impress, #impressionism{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+  }
   .pic-container::-webkit-scrollbar {
     /* hide the weird second scroll bar */
     display: none;
@@ -769,41 +778,58 @@ input[type=text], input[type=email], textarea {
   /* Monet Page */
   /* TODO: changing the monet page to 3 columns side by side */
   #monet-container{
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: 500px auto auto auto;
+    background-image: none;
+    background-color: #123440;
   }
+  /* styling the carousel */
+  .carousel{
+    display: block;
+    grid-row: 1 / 2;
+    margin-top: 90px;
+    align-self: center;
+  }
+  .carousel-title{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.7em;
+  }
+  .carousel-title:hover{
+    color: whitesmoke;
+  }
+  /* styling articles on monet page */
   #monet-container h1{
     font-size: 1.5em;
     padding-bottom: 5%;
   }
   .container{
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 500px auto;
-    margin: 0 1% 0 1%;
+    grid-template-columns: 400px auto;
+    grid-template-rows: 200px 1fr;
+    margin: 40px auto 0 auto;
     padding: 1% 2% 1% 2%;
+    background-color: whitesmoke;
   }
   .container1{
-    margin-top: 10vh;
-    grid-row: 1 / -1;
-    grid-column: 1 / 2;
-  }
-  .container2{
-    margin-top: 10vh;
-    grid-row: 1 / -1;
-    grid-column: 2 / 3;
-  }
-  .container3{
-    margin-top: 10vh;
-    grid-row: 1 / -1;
-    grid-column: 3 / 4;
-  }
-  .image{
-    grid-column: 1 / -1;
     grid-row: 2 / 3;
   }
-  .monet_text{
+  .container2{
+    grid-row: 3 / 4;
+  }
+  .container3{
+    grid-row: 4 / -1;
+  }
+  /* elements inside the containers */
+  .container h1{
+    grid-row: 1 / 2;
     grid-column: 1 / -1;
-    grid-row: 3 / -1;
+  }
+  .image{
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
+  }
+  .monet_text{
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
   }
 
 
@@ -894,6 +920,7 @@ input[type=text], input[type=email], textarea {
   /* specifically turn off the gradient filter of the front page */
   #neo-impress::after, #post-impress::after, #impressionism::after{
     animation: none;
+    background-attachment: inherit !important;
   }
   /* turning off hover effects */
   *:hover{
