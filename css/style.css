@@ -430,20 +430,18 @@ input[type=text], input[type=email], textarea {
     transform: translateY(-1%);
   }
 
-  /* impressionism page snap effects for desktop */
+  /* impressionism page */
   #neo-impress, #post-impress, #impressionism{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; 
+    height: 100vh;
   }
   .pic-container::-webkit-scrollbar {
     /* hide the weird second scroll bar */
     display: none;
   }
   .pic-container div{
-    /* styling the image on the front page to fully occupy the space */
-    height: 100vh;
-    scroll-snap-align: start;
     /* the following is to center the titles and text on the pages */
     display: flex;
     justify-content: center;
@@ -459,12 +457,6 @@ input[type=text], input[type=email], textarea {
   #impress-container p{
     padding: 0 15% 0 15%;
   }
-  .pic-container{
-    /* for snap effects */
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-  }
   #impress-container{
     padding-bottom: 0;
     padding-top: 0;
@@ -474,7 +466,7 @@ input[type=text], input[type=email], textarea {
     display: inline-block;
     color: whitesmoke;
     position: relative;
-    top: 20%;
+    top: 30px;
     font-size: 1.8em;
     cursor: pointer;
     z-index: 10;
@@ -774,7 +766,19 @@ input[type=text], input[type=email], textarea {
 }
 
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
+  /* front page with snap effects */
+  .pic-container div{
+    /* styling the image on the front page to fully occupy the space */
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+  .pic-container{
+    /* for snap effects */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
   /* Monet Page */
   /* TODO: changing the monet page to 3 columns side by side */
   #monet-container{
