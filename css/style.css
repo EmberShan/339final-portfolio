@@ -781,6 +781,7 @@ input[type=text], input[type=email], textarea {
     grid-row: 1 / 2;
     margin-top: 90px;
     align-self: center;
+    background-color: #123440;
   }
   .container1{
     grid-row: 2 / 3;
