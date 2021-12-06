@@ -376,7 +376,7 @@ input[type=text], input[type=email], textarea {
 }
 
 /* larger screens */
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 600px) {
   main h1{
     font-size: 2em;
     padding-top: 8%;
@@ -766,7 +766,7 @@ input[type=text], input[type=email], textarea {
 }
 
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   /* front page with snap effects */
   .pic-container div{
     /* styling the image on the front page to fully occupy the space */
@@ -885,14 +885,14 @@ input[type=text], input[type=email], textarea {
     justify-self: center;
     /* make the filter always stay on page */
     position: fixed;
-    top: 315px;
+    top: 20%;
     right: 25px;
     z-index: 1;
   }
   .filter-desktop .btn{
     background-color: rgba(245, 245, 245, 0.8);
     width: 125px;
-    padding: 15px 20px;
+    padding: 10px 20px;
     margin-top: 20px;
     font-size: 1.05em;
     text-transform: capitalize;
