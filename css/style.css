@@ -364,7 +364,7 @@ input[type=text], input[type=email], textarea {
 }
 
 /* larger screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 750px) {
   main h1{
     font-size: 2em;
     padding-top: 8%;
@@ -553,6 +553,8 @@ input[type=text], input[type=email], textarea {
     height: 500px;
     object-position: 45% 20%;
   }
+
+
   /* no read more for tablets and desktop */
   .read-more-btn, .dots{
     display: none;
@@ -562,23 +564,17 @@ input[type=text], input[type=email], textarea {
   }
   /* styling grid for new monet page layout for tablet */
   .container{
+    background-color: rgba(245, 245, 245, 0.7);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     justify-content: center;
-    margin: 0 5% 0 5%;
     padding: 0 5% 2% 5%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
     align-items: center;
   }
   .container1{
     margin-top: 10vh;
-    grid-row: 1 / 2;
-  }
-  .container2{
-    grid-row: 2 / 3;
-  }
-  .container3{
-    grid-row: 3 / 4;
   }
   .image{
     grid-column: 1 / 2;
@@ -771,8 +767,6 @@ input[type=text], input[type=email], textarea {
   /* TODO: changing the monet page to 3 columns side by side */
   #monet-container{
     grid-template-rows: 500px auto auto auto;
-    background-image: none;
-    background-color: whitesmoke;
   }
   /* styling the carousel */
   .carousel{
@@ -780,28 +774,6 @@ input[type=text], input[type=email], textarea {
     grid-row: 1 / 2;
     margin-top: 90px;
     align-self: center;
-  }
-  .carousel-title{
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 1.7em;
-    text-shadow: 2px 2px rgba(2, 2, 2, .5);
-  }
-  .carousel-title:hover{
-    color: whitesmoke;
-    text-decoration: underline;
-  }
-  /* styling articles on monet page */
-  #monet-container h1{
-    font-size: 1.5em;
-    padding-bottom: 5%;
-  }
-  .container{
-    grid-template-columns: 400px auto;
-    grid-template-rows: 200px 1fr;
-    margin: 40px auto 0 auto;
-    padding: 1% 2% 1% 2%;
-    background-color: whitesmoke;
   }
   .container1{
     grid-row: 2 / 3;
@@ -812,19 +784,47 @@ input[type=text], input[type=email], textarea {
   .container3{
     grid-row: 4 / -1;
   }
-  /* elements inside the containers */
-  .container h1{
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
+  .carousel-title{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.7em;
+    text-shadow: 2px 2px rgba(2, 2, 2, .5);
   }
-  .image{
-    grid-row: 2 / -1;
-    grid-column: 1 / 2;
+  .carousel-title:hover{
+    color: whitesmoke;
   }
-  .monet_text{
-    grid-row: 2 / -1;
-    grid-column: 2 / -1;
+  /* animating the underline hover effect */
+  .carousel-title::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 0.1em;
+    background-color: whitesmoke;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
   }
+  .carousel-title:hover::after,
+  .carousel-title:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-title{
+    overflow: hidden;
+  }
+  .carousel-title::after{
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  /* styling articles on monet page */
+  #monet-container h1{
+    font-size: 1.5em;
+    padding-bottom: 5%;
+  }
+  
+  
+  
 
 
   /* Gallery Page */
@@ -959,9 +959,21 @@ input[type=text], input[type=email], textarea {
     animation: none;
     background-attachment: inherit !important;
   }
+  /* turn off gallery animation */
+  .img-container div{ 
+    transition: none !important;
+  }
+  .img-container div::before, .img-container div::after {
+    transition: none !important;
+  }
+  /* turn off carousel title animation */
+  .carousel-title::after{
+    transform: none !important;
+  }
   /* turning off hover effects */
   *:hover{
     transform: none !important;
   }
+
  
  }
