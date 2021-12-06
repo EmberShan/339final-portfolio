@@ -296,18 +296,6 @@ footer p{
   border-radius: 5px;
   font-size: 1em;
 }
-.img-container div:nth-of-type(odd){
-  animation: filter-animate 2s ease;
-}
-@keyframes filter-animate{
-  from{
-    filter:grayscale(80%);
-  }
-  to{
-    filter:grayscale(0%);
-  }
-}
-
 
 /* more artists styling here */
 #more-container{
@@ -618,11 +606,10 @@ input[type=text], input[type=email], textarea {
     object-fit: cover;
     object-position: 0 10%;
     width: 98%;
-    height: 90%;
+    height: 92%;
   }
   .caption{
     padding: 0;
-    padding-bottom: 1%;
   }
   .load-more-btn{
     padding: 2% 4% 2% 4%;
@@ -779,6 +766,7 @@ input[type=text], input[type=email], textarea {
     overflow-y: scroll;
     height: 100vh;
   }
+  
   /* Monet Page */
   /* TODO: changing the monet page to 3 columns side by side */
   #monet-container{
@@ -842,6 +830,7 @@ input[type=text], input[type=email], textarea {
   #gallery-container{
     display: grid;
     grid-template-rows: 300px auto;
+    box-sizing: border-box;
   }
   .gallery-img{
     cursor: pointer;
@@ -849,9 +838,52 @@ input[type=text], input[type=email], textarea {
   .modal-open {
     padding-right: 0px !important;
   }
-  .img-container div{
-    width: 350px;
-    height: 350px;
+  /* animation for images */
+  .img-container div{ 
+    filter: grayscale(40%);
+    border: 3px solid #4D6A6D;
+    width: 300px;
+    height: 300px;
+    /* for placing the peudo element */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 1s;
+    margin: 10px;
+  }
+  .img-container div:hover{
+    filter: grayscale(0);
+  }
+  /* rectangles to hide the borders */
+  .img-container div::before, .img-container div::after {
+    width: 300px;
+    height: 300px;
+  }
+  .img-container div::before, .img-container div::after {
+    position: absolute;
+    background: #eee;
+    z-index: -1;
+    transition: 1s;
+    content: '';
+  }
+  .img-container div:hover::before {
+    width: 0px;
+    background: #4D6A6D;
+  }
+  .img-container div:hover::after {
+    height: 0px;
+    background: #4D6A6D;
+  }
+  .img-container div:hover {
+    background: #4D6A6D;
+  }
+  .caption{
+    color: #4D6A6D;
+    padding-top: 7px;
+    font-size: .7em;
   }
   /* styling the grid layout */
   .gallery-row1{
@@ -860,7 +892,7 @@ input[type=text], input[type=email], textarea {
   .gallery-row2{
     grid-row: 2 / -1;
     display: grid;
-    grid-template-columns: auto 150px;
+    grid-template-columns: auto 200px;
     grid-template-rows: auto auto;
   }
   .img-container{
@@ -868,10 +900,13 @@ input[type=text], input[type=email], textarea {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
-  .load-more-btn{
+  /* .load-more-btn
     padding: 1% 2% 1% 2%; 
     grid-column: 1 / 2;
     grid-row: 2 / -1;
+  } */
+  .load-more-btn{
+    display: none;
   }
   .filter-mobile{
     /* hide the dropdown menu for filtering */
@@ -883,18 +918,14 @@ input[type=text], input[type=email], textarea {
     display: flex;
     flex-direction: column; 
     justify-self: center;
-    /* make the filter always stay on page */
-    position: fixed;
-    top: 20%;
+    position: relative;
     right: 25px;
-    z-index: 1;
   }
   .filter-desktop .btn{
-    background-color: rgba(245, 245, 245, 0.8);
-    width: 125px;
+    background-color: rgba(245, 245, 245, 0.7);
+    width: 150px;
     padding: 10px 20px;
     margin-top: 20px;
-    font-size: 1.05em;
     text-transform: capitalize;
   }
   .filter-desktop .btn:hover{
