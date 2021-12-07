@@ -38,8 +38,6 @@ a.skip:focus{
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* justify-content: center;
-  align-items: center; */
 }
 .sticky{
   position: fixed;
@@ -54,7 +52,7 @@ main{
   background-attachment: fixed;
   background-size: cover; 
 }
-/*  */
+/* hamburger menu */
 .hamburger-menu{
   position: absolute; 
   top: 1em;
@@ -424,9 +422,7 @@ input[type=text], input[type=email], textarea {
 
   /* impressionism page */
   #neo-impress, #post-impress, #impressionism{
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover; 
     height: 100vh;
   }
   .pic-container::-webkit-scrollbar {
@@ -965,6 +961,8 @@ input[type=text], input[type=email], textarea {
   /* specifically turn off the gradient filter of the front page */
   #neo-impress::after, #post-impress::after, #impressionism::after{
     animation: none;
+  }
+  #neo-impress, #post-impress, #impressionism{
     background-attachment: inherit !important;
   }
   /* turn off gallery animation */
